@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angular ueditor demo</title>
+	<script type="text/javascript" src="/Public/lib/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="/Public/lib/ueditor/ueditor.all.js"></script>
+	<script type="text/javascript" src="/Public/lib/angular.min.js"></script>
+</head>
+<body ng-app="UeditorApp" ng-controller="CTRL">
+	<div class="ueditor" ng-model="content1" config="_Config" style="min-height: 300px;width: 600px;"></div>
+
+	<script type="text/javascript" src="/Public/lib/ueditor/angular-ueditor.js"></script>
+<script type="text/javascript">
+	var baseUrl = "/index.php";
+	angular.module('UeditorApp', ["ng.ueditor"
+		]).controller("CTRL",["$scope",function($S){
+			$S._Config = {
+	            // 工具按钮
+	            toolbars:[[
+	            'fullscreen', 'source', '|', 'undo', 'redo', '|',
+	            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+	            'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+	            'custombackend', 'paragraph', 'fontfamily', 'fontsize', '|',
+	            'directionalityltr', 'directionalityrtl', 'indent', '|',
+	            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+	            'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+	            'simpleupload', 'insertimage', 'emotion', 'attachment', 'map', 'insertcode', 'pagebreak', 'template', '|',
+	            'horizontal', 'date', 'time', 'spechars', 'wordimage', '|',
+	            'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+	            'print', 'preview', 'searchreplace', 'drafts', 'help'
+	            ]],
+	            serverUrl : baseUrl + '/Api/Ueditor/',
+	            // 不抓取远程图片
+	            catchRemoteImageEnable: false
+	        }
+	        // 这里是通过接口请求到的数据内容
+	    	$S.content1 = '';
+		}]);
+</script>
+</body>
+</html>
