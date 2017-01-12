@@ -62,3 +62,11 @@
 
 - 上传涂鸦图片（base64 format）
 - 抓取远程文件功能
+
+## reference
+
+- https://github.com/Nintendov/Ueditor-thinkphp
+- https://github.com/zqjimlove/angular-ueditor
+- http://www.open-open.com/lib/view/open1411391886875.html
+- UEditor编辑器如何关闭抓取远程图片本地化功能: http://blog.csdn.net/alex_fung/article/details/50802565
+- base64编码的图片上传到服务器: http://www.thinkphp.cn/code/1423.html
